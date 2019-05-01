@@ -1,0 +1,8 @@
+%Find peaks and corresponding index numbers
+
+function [pks,locs,index] = PeaksIndices(Y1,X1)
+[pks,locs] = findpeaks(Y1,X1);
+for i=1:length(pks);
+    index(i)=find(Y1==pks(i) & X1==locs(i));
+end
+end
